@@ -19,150 +19,175 @@ void main()
 
 		switch (n)
 		{
-		case 1:
-			/*1. Для заданного n в одном цикле вычислить n! и n2.*/
+			case 1:
+				{
 
-			cout << "Введите число n: ";
-			cin >> number;
+				/*1. Для заданного n в одном цикле вычислить n! и n2.*/
 
-			int factorial, square;
-
-			cout << "\tn\t" << "\tn!\t" << "\tn^2\t" << endl;
-			cout << "--------------------------------------------------" << endl;
-
-			for (factorial = 1, i = 1; i <= number; i++)
-			{
-				factorial *= i;
-				square = pow(i, 2);
-				cout << "\t" << i << "\t\t" << factorial << "\t\t" << square << endl;
-			}
-
-			cout << endl;
-
-			system("pause");
-
-			break;
-
-		case 2:
-			/*2. Задано натуральные числа от 10 до N.
-			Найти наибольшую цифру целого десятичного числа.*/
-
-			cout << "Введите натуральные числа от 10 до N: ";
-			cin >> number;
-
-			while (number < 10)
-			{
-				cout << "Число должно быть в интервале от 10 до N. " << endl;
-				cout << "Введите число еще раз." << endl;
+				cout << "Введите число n: ";
 				cin >> number;
-			}
 
-			count = 0;
-			max = -1;
-			temp = number;
+				int factorial, square;
 
-			while (temp > 0)
-			{
-				temp /= 10;
-				count++;
-			}
+				cout << "\tn\t" << "\tn!\t" << "\tn^2\t" << endl;
+				cout << "--------------------------------------------------" << endl;
 
-			temp = number;
-			temp2 = number;
+					for (factorial = 1, i = 1; i <= number; i++)
+					{
+						factorial *= i;
+						square = pow(i, 2);
+						cout << "\t" << i << "\t\t" << factorial << "\t\t" << square << endl;
+					}
 
-			for (i = 1; i <= count; i++)
-			{
-				temp %= 10;
-				if (temp > max) max = temp;
-				temp2 /= 10;
-				temp = temp2;
-			}
+					cout << endl;
 
-			cout << "Максимальное цифра в числе " << number << " = " << max << endl;
-			cout << endl;
+				system("pause");
+				system("cls");
+
+				}
 			break;
 
-		case 3:
-			/*3. Задано натуральные числа от 10 до N.
-			Для натурального числа найти первую цифру и сумму его цифр.*/
+			case 2:
+				{
 
-			cout << "Введите натуральные числа от 10 до N: ";
-			cin >> number;
+				/*2. Задано натуральные числа от 10 до N.
+				Найти наибольшую цифру целого десятичного числа.*/
 
-			while (number < 10)
-			{
-				cout << "Число должно быть в интервале от 10 до N. " << endl;
-				cout << "Введите число еще раз." << endl;
+				cout << "Введите натуральные числа от 10 до N: ";
 				cin >> number;
-			}
 
-			count = 0;
-			temp = number;
+					while (number < 10)
+					{
+						cout << "Число должно быть в интервале от 10 до N. " << endl;
+						cout << "Введите число еще раз." << endl;
+						cin >> number;
+					}
 
-			while (temp > 0)
-			{
-				temp /= 10;
-				count++;
-			}
+					count = 0;
+					max = -1;
+					temp = number;
 
-			temp = number;
+					while (temp > 0)
+					{
+						temp /= 10;
+						count++;
+					}
 
-			for (i = 1; i < count; i++) temp /= 10;
-			cout << "Первая цифра числа это " << temp << endl;
+					temp = number;
+					temp2 = number;
 
-			temp = number;
-			temp2 = number;
-			sum = 0;
+					for (i = 1; i <= count; i++)
+					{
+						temp %= 10;
+						if (temp > max) max = temp;
+						temp2 /= 10;
+						temp = temp2;
+					}
 
-			for (i = 1; i <= count; i++)
-			{
-				temp2 %= 10;
-				sum += temp2;
-				temp /= 10;
-				temp2 = temp;
-			}
+					cout << "Максимальное цифра в числе " << number << " = " << max << endl;
+					cout << endl;
 
-			cout << "Сумма цифр в числе " << number << " = " << sum << endl;
-			cout << endl;
+				system("pause");
+				system("cls");
+
+				}
 			break;
 
-		case 4:
+			case 3:
+				{
+				/*3. Задано натуральные числа от 10 до N.
+				Для натурального числа найти первую цифру и сумму его цифр.*/
+
+				cout << "Введите натуральные числа от 10 до N: ";
+				cin >> number;
+
+					while (number < 10)
+					{
+						cout << "Число должно быть в интервале от 10 до N. " << endl;
+						cout << "Введите число еще раз." << endl;
+						cin >> number;
+					}
+
+					count = 0;
+					temp = number;
+
+					while (temp > 0)
+					{
+						temp /= 10;
+						count++;
+					}
+
+					temp = number;
+
+					for (i = 1; i < count; i++) temp /= 10;
+					cout << "Первая цифра числа это " << temp << endl;
+
+					temp = number;
+					temp2 = number;
+					sum = 0;
+
+					for (i = 1; i <= count; i++)
+					{
+						temp2 %= 10;
+						sum += temp2;
+						temp /= 10;
+						temp2 = temp;
+					}
+
+					cout << "Сумма цифр в числе " << number << " = " << sum << endl;
+					cout << endl;
+
+				system("pause");
+				system("cls");
+
+				}
+			break;
+
+			case 4:
+			{
+
 			/*4. Определить, является ли целое число симметричным,
 			т. е. таким числом, которое одинаково читается слева направо и
 			справа налево (палиндром, перевертыш).
 			Например, числа 123321, 202, 9889, 5555.*/
 
-			int reversed;
+				int reversed;
 
-			cout << "Введите натуральное число: ";
-			cin >> number;
+				cout << "Введите натуральное число: ";
+				cin >> number;
 
-			temp = number;
-			count = 0;
+				temp = number;
+				count = 0;
 
-			while (temp > 0)
-			{
-				temp /= 10;
-				count++;
-			}
+					while (temp > 0)
+					{
+						temp /= 10;
+						count++;
+					}
 
-			temp = number;
-			temp2 = number;
-			reversed = 0;
+					temp = number;
+					temp2 = number;
+					reversed = 0;
 
-			for (i = 1; i <= count; i++)
-			{
-				temp2 %= 10;
-				reversed = (reversed * 10) + temp2;
-				temp /= 10;
-				temp2 = temp;
-			}
+					for (i = 1; i <= count; i++)
+					{
+						temp2 %= 10;
+						reversed = (reversed * 10) + temp2;
+						temp /= 10;
+						temp2 = temp;
+					}
 
-			if (number == reversed)
-				cout << "Число являестя полиндромом." << endl;
-			else
-				cout << "Число не являестя полиндромом." << endl;
-			cout << endl;
+					if (number == reversed)
+						cout << "Число являестя полиндромом." << endl;
+					else
+						cout << "Число не являестя полиндромом." << endl;
+
+					cout << endl;
+
+					system("pause");
+					system("cls");
+
+				}
 			break;
 
 		case 5:
