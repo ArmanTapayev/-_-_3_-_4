@@ -190,27 +190,33 @@ void main()
 				}
 			break;
 
-		case 5:
-			/*5. Вывести сумму квадратов чисел от 12 до 80 по 1- числу в строке.*/
-
-			int sumSq;
-
-			for (i = 12; i <= 80; i++)
-			{
-				for (j = 12; j <= 80; j++)
+			case 5:
 				{
-					sumSq = pow(j, 2) + pow(i, 2);
-					/*if (j % 11 != 0) cout << sumSq << "\t";
-					else cout << endl;*/
-					cout << sumSq << "\t";
+				/*5. Вывести сумму квадратов чисел от 12 до 80 по 1-числу в строке.*/
+
+					int sumSq;
+
+					for (i = 12; i <= 80; i++)
+					{
+						for (j = 12; j <= 80; j++)
+						{
+							sumSq = pow(j, 2) + pow(i, 2);
+							cout << sumSq << "\t";
+						}
+
+						cout << endl;
+						cout << endl;
+					}
+
+					cout << endl;
+
+					system("pause");
+					system("cls");
+
 				}
-				cout << endl;
-				cout << endl;
-			}
-			cout << endl;
 			break;
 
-		case 6:
+			case 6:
 			/*6. Вывести разность квадратов чисел от 22 до 88
 			по 1- числу в строке.*/
 
