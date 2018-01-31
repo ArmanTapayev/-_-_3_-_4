@@ -217,24 +217,29 @@ void main()
 			break;
 
 			case 6:
-			/*6. Вывести разность квадратов чисел от 22 до 88
-			по 1- числу в строке.*/
-
-			int remainderSq;
-
-			for (i = 22; i <= 88; i++)
-			{
-				for (j = 22; j <= 88; j++)
 				{
-					remainderSq = pow(j, 2) - pow(i, 2);
-					/*if (j % 11 != 0) cout << remainderSq << "\t";
-					else cout << endl;	*/
-					cout << remainderSq << "\t";
+				/*6. Вывести разность квадратов чисел от 22 до 88
+				по 1-числу в строке.*/
+
+				int remainderSq;
+
+					for (i = 22; i <= 88; i++)
+					{
+						for (j = 22; j <= 88; j++)
+						{
+							remainderSq = pow(j, 2) - pow(i, 2);
+							cout << remainderSq << "\t";
+						}
+						cout << endl;
+						cout << endl;
+					}
+
+				cout << endl;
+
+				system("pause");
+				system("cls");
+
 				}
-				cout << endl;
-				cout << endl;
-			}
-			cout << endl;
 			break;
 
 		case 7:
